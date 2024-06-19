@@ -58,7 +58,7 @@ def to_do_list():
         except ValueError:
             print("Please enter the number. ")
     save_tasks_to_file()
-    print("Bye")
+    print("Bye!")
 
 
 if __name__ == "__main__":
