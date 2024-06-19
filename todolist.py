@@ -59,6 +59,7 @@ def to_do_list():
             print("Please enter the number. ")
     save_tasks_to_file()
     print("Bye")
+    print("See ya")
 
 
 if __name__ == "__main__":
