@@ -1,19 +1,22 @@
-import os
 tasks_file = "tasks.txt"
 tasks = []
 
 
 def load_tasks_from_file():
-    if os.path.exists(tasks_file):
+    try:
         with open(tasks_file, "r") as file:
             for line in file:
                 tasks.append(line.strip())
+    except FileNotFoundError:
+        print("Your to do list isn't exist yet, let's create new one")
+        open(tasks_file, "w+")
+        print("Great! Time to write something down")
 
 
 def save_tasks_to_file():
     with open(tasks_file, "w") as file:
         for task in tasks:
-            file.write(task)
+            file.write(task + "\n")
 
 
 def add_task():
