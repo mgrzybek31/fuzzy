@@ -18,6 +18,7 @@ class FileRenamer:
                 file_name, file_extension = os.path.splitext(path_to_ele)
                 new_name = f"{file_name} {self.add_the_date(path_to_ele)}{file_extension}"
                 os.rename(path_to_ele, new_name)
+        print("Command fulfilled.")
 
 
 if __name__ == "__main__":
